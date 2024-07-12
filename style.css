@@ -1,0 +1,207 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f26a8d;
+    color: #124559;
+    transition: all 0.3s ease;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6f2dbd;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h1{
+    padding: 0;
+    margin: 0 10px;
+    color: #ecf39e;
+}
+.menu-btn {
+    background-color: #dd2d4a;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #cbeef3;
+    color: #720026;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    padding-top: 2rem;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0;
+    top: 50px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: #02393b;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ff7f51;
+    border-radius: 5px;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+}
+
+h2 {
+    color: #ecf39e;
+}
+
+#skills ul li,#education ul li,#projects ul li,#certifications ul li{
+     list-style: none;
+     padding: 10px;
+     margin-right: 200px;
+     margin-bottom: 5px;
+     border-radius: 10px;
+     background-color: #f7c59f;
+     color: #344e41;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6f2dbd;
+    color: white;
+    margin-top: 2rem;
+}
+hr{
+   margin: 10px 0;
+}
+.button,
+.social a {
+    transform-origin: center;
+    transition-duration: 100ms;
+}
+
+.button {
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: #9013fe;
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 1.25em 2em;
+    text-shadow: none;
+    transition-property: box-shadow, transform;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+.button:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transform: scale(0.98) translateX(-2px);
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+.contact {
+    display: inline-block;
+    margin-top: 1.5rem;
+    vertical-align: top;
+}
+.social {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.social li {
+    height: 2rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    width: 2rem;
+    list-style: none;
+}
+
+.social a {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    height: 2rem;
+    justify-content: center;
+    opacity: 0.5;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+    color: white;
+}
+
+.social a:hover {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.social a:active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .sidebar {
+        left: -250px;
+        height: 100%;
+    }
+
+    .sidebar.active {
+        top: 50px;
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
